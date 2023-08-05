@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish-blue: hsl(246, 25%, 77%);
+}
+
+body {
+  background-image: url(./images/bg-intro-mobile.png);
+  background-color: var(--red);
+  font-size: 62.5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px;
+}
+
+h1 {
+  color: white;
+  font-weight: bold;
+  font-size: 3.2em;
+  margin-bottom: .6em;
+}
+
+h1 + p {
+  color: white;
+  font-size: 1.6em;
+  font-weight: 500;
+  margin-bottom: 2.8em;
+}
+
+.freeTrial {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4em;
+  width: 100%;
+  height: 80px;
+  background-color: var(--blue);
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  background-color: white;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  padding: 24px;
+}
+
+input {
+  font-size: 1.2em;
+  width: 100%;
+  height: 48px;
+  padding: 14px;
+  margin-bottom: 14px;
+  border: .5px solid var(--grayish-blue);
+  border-radius: 4px;
+}
+
+::placeholder {
+  font-size: 'Poppins';
+  font-weight: 600;
+}
+
+.formContainer p {
+  text-align: center;
+}
