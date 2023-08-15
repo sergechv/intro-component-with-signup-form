@@ -13,30 +13,64 @@
 </head>
 <body>
 
-  <h1>Learn to code by watching others</h1>
+  <div class="info">
+    <h1>Learn to code by watching others</h1>
 
-  <p>
-    See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-    but understanding how developers think is invaluable.
-  </p>
-
-  <div class="freeTrial">
-    <p><strong>Try it free 7 days</strong> then</p>
-    <p>$20/mo. thereafter</p>
-  </div>
-
-  <div class="formContainer">
-    <form>
-      <input type="text" name="firstName" id="" placeholder="First Name">
-      <input type="text" name="lastName" id="" placeholder="Last Name">
-      <input type="email" name="email" id="" placeholder="Email Address">
-      <input type="password" name="password" id="" placeholder="Password">
-      <div>Claim your free trial</div>
-    </form>
     <p>
-      By clicking the button, you are agreeing to our Terms and Services
+      See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+      but understanding how developers think is invaluable.
     </p>
   </div>
+
+  <div class="container">
+    <div class="freeTrial">
+      <p><strong>Try it free 7 days</strong> then</p>
+      <p>$20/mo. thereafter</p>
+    </div>
+  
+    <div class="formContainer">
+      <form>
+        <div class="input-container">
+          <input type="text" name="firstName" id="firstName" placeholder="First Name">
+          <span class="errMsg">First Name cannot be empty</span>
+          <div class="icon-container">
+            <img src="./images/icon-error.svg" alt="Error Icon" class="error-icon">
+          </div>
+        </div>
+        
+        <div class="input-container">
+          <input type="text" name="lastName" id="lastName" placeholder="Last Name">
+          <span class="errMsg">Last Name cannot be empty</span>
+          <div class="icon-container">
+            <img src="./images/icon-error.svg" alt="Error Icon" class="error-icon">
+          </div>
+        </div>
+
+        <div class="input-container">
+          <input type="email" name="email" id="email" placeholder="Email Address">
+          <span class="errMsg">Looks like this is not an email</span>
+          <div class="icon-container">
+            <img src="./images/icon-error.svg" alt="Error Icon" class="error-icon">
+          </div>
+        </div>
+        
+        <div class="input-container">
+          <input type="password" name="password" id="password" placeholder="Password">
+          <span class="errMsg">Password cannot be empty</span>
+          <div class="icon-container">
+            <img src="./images/icon-error.svg" alt="Error Icon" class="error-icon">
+          </div>
+        </div>
+
+        <button id="claim-btn" type="submit">CLAIM YOUR FREE TRIAL</button>
+      </form>
+      <p>
+        By clicking the button, you are agreeing to our <a href="">Terms and Services</a>
+      </p>
+    </div>
+  </div>
+
+  
   <script src="index.js"></script>  
 </body>
 </html>

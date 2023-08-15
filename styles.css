@@ -5,6 +5,10 @@
   font-family: 'Poppins';
 }
 
+html {
+  display: flex;
+}
+
 :root {
   --red: hsl(0, 100%, 74%);
   --green: hsl(154, 59%, 51%);
@@ -15,15 +19,20 @@
 
 body {
   background-image: url(./images/bg-intro-mobile.png);
+  background-position: center;
   background-color: var(--red);
   font-size: 62.5%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 24px;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 h1 {
+  text-align: center;
   color: white;
   font-weight: bold;
   font-size: 3.2em;
@@ -31,6 +40,7 @@ h1 {
 }
 
 h1 + p {
+  text-align: center;
   color: white;
   font-size: 1.6em;
   font-weight: 500;
@@ -47,7 +57,7 @@ h1 + p {
   width: 100%;
   height: 80px;
   background-color: var(--blue);
-  border-radius: 10px;
+  border-radius: 10px 10px 10px 10px;
   margin-bottom: 24px;
 }
 
@@ -67,7 +77,7 @@ form {
   align-items: center;
   justify-content: center;
   width: auto;
-  padding: 24px;
+  padding: 24px 24px 0 24px;
 }
 
 input {
@@ -75,16 +85,159 @@ input {
   width: 100%;
   height: 48px;
   padding: 14px;
-  margin-bottom: 14px;
+  padding-right: 66px;
+  margin-top: 12px !important;
+  margin-bottom: 6px;
   border: .5px solid var(--grayish-blue);
   border-radius: 4px;
 }
 
+input:focus {
+  border: 1px solid var(--grayish-blue);
+}
+
+form input:first-child {
+  margin-top: 0;
+}
+
 ::placeholder {
-  font-size: 'Poppins';
+  font-family: 'Poppins';
   font-weight: 600;
+}
+
+/* error-message styles start */
+.input-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.icon-container {
+  display: none;
+  position: absolute;
+  top: 46%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.error-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.inputErr {
+  border: 2px solid var(--red);
+}
+
+.errMsg {
+  display: none;
+  color: var(--red);
+  font-style: italic;
+  font-weight: 500;
+  text-align: right;
+  width: 100%;
+}
+/* error-message styles end */
+
+#claim-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--green);
+  color: white;
+  font-size: 1.4em;
+  text-align: center;
+  font-weight: 600;
+  width: 100%;
+  height: 48px;
+  padding: auto 20px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+#claim-btn:active {
+  background-color: #6cecb4;
+}
+
+#claim-btn:hover {
+  cursor: pointer;
 }
 
 .formContainer p {
   text-align: center;
+  font-size: 1.1em;
+  color: var(--grayish-blue);
+  margin-top: 10px;
+  padding: 0 38px;
+  margin-bottom: 24px;
+}
+
+.formContainer p a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 600;
+}
+
+@media (min-width: 900px) {
+  
+
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    max-width: 1120px;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .info h1 {
+    text-align: left;
+    font-size: 4em;
+  }
+
+  .info p {
+    text-align: left;
+  }
+
+  .freeTrial {
+    font-size: 1.4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    height: 60px;
+  }
+
+  form {
+    padding: 38px 38px 0 38px;
+  }
+
+  input {
+    font-size: 1.4em;
+    height: 54px;
+    padding: 12px;
+    padding-right: 66px;
+    margin-top: 20px;
+  }
+
+  .errMsg {
+    font-size: 1.2em;
+  }
+
+  #claim-btn {
+    height: 54px;
+  }
+
 }
